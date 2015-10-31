@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>nom</key>
+		<string>poisson04</string>
+		<key>fichierImage</key>
+		<string>p04.frame-</string>
+		<key>extImage</key>
+		<string>gif</string>
+		<key>nbImages</key>
+		<integer>10</integer>
+		<key>dureeAnimation</key>
+		<integer>1</integer>
+		<key>direction</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>nom</key>
+		<string>poisson08</string>
+		<key>fichierImage</key>
+		<string>p08.frame-</string>
+		<key>extImage</key>
+		<string>gif</string>
+		<key>nbImages</key>
+		<integer>30</integer>
+		<key>dureeAnimation</key>
+		<integer>3</integer>
+		<key>direction</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>nom</key>
+		<string>poisson10</string>
+		<key>fichierImage</key>
+		<string>p10.frame-</string>
+		<key>extImage</key>
+		<string>gif</string>
+		<key>nbImages</key>
+		<integer>4</integer>
+		<key>dureeAnimation</key>
+		<integer>1</integer>
+		<key>direction</key>
+		<integer>-1</integer>
+	</dict>
+</array>
+</plist>
