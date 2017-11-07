@@ -3,7 +3,7 @@
 //  Classe - Aquarium
 //
 //  Created by Alain on 2014-10-11.
-//  Copyright (c) 2014-2015 Production sur support. All rights reserved.
+//  Copyright (c) 2014-2017 Production sur support. All rights reserved.
 //
 //  ============================================================================================
 //  À l'usage exclusif des étudiants et étudiantes de
@@ -24,6 +24,8 @@
 //  --------------------------------------------------------------------------------------------
 //  M-A-J:  2015.10.31  - (joyeux halloween!) - Conversion vers swift 1.2
 //          2015.10.31  - Ajout de blocs MARK:
+//          2016.10.25  - Conversion vers swift 3
+//          2017.11.07  - Conversion vers Xcode 9 et swift 4
 //  ============================================================================================
 
 import UIKit
@@ -52,12 +54,12 @@ class ViewController: UIViewController{
     // MARK: - Définition des IBAction
     // ***********************************************************************
     @IBAction func recommencer(sender: AnyObject) {
-        println("recommencer")
+        print("recommencer")
         commencerLaPartie()
     } // recommencer
    
     @IBAction func ajouterNourriture(sender: AnyObject) {
-        println("ajouterNourriture")
+        print("ajouterNourriture")
         // Ajouter à la nourriture disponible un poucentage de la quant actuelle.
         nourritureDisponible += Int(arc4random_uniform(UInt32(nourritureDisponible)))
         
@@ -72,7 +74,7 @@ class ViewController: UIViewController{
     // ***********************************************************************
 
     override func viewDidLoad() {
-        println("viewDidLoad")
+        print("viewDidLoad")
         super.viewDidLoad()
         // Ajouter des bulles
         // TODO
@@ -82,7 +84,7 @@ class ViewController: UIViewController{
     } // viewDidLoad
  
     override func didReceiveMemoryWarning() {
-        println("didReceiveMemoryWarning")
+        print("didReceiveMemoryWarning")
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     } // didReceiveMemoryWarning
@@ -96,11 +98,12 @@ class ViewController: UIViewController{
       Préparer la scène et placer les poissons.
     */
     func commencerLaPartie(){
-        println("commencerLaPartie")
+        print("commencerLaPartie")
         // Masquer la View de fin de la partie
-        finPartie.hidden = true
+        finPartie.isHidden = true
         nourritureDisponible = maximumNourritureDisponible
         actualiserProgressViewQuantNourriture()
+        
         nbPoissons = nbPoissonsDepart
         actualiserLabelNBPoissons()
         // Ajouter des poissons
@@ -112,7 +115,7 @@ class ViewController: UIViewController{
       Réactualiser l'indicateur du nombres de poissons.
     */
     func actualiserLabelNBPoissons(){
-        println("actualiserLabelNBPoissons")
+        print("actualiserLabelNBPoissons")
         labelNBPoissons.text = "\(nbPoissons)"
     } // actualiserLabelNBPoissons
 
@@ -120,15 +123,15 @@ class ViewController: UIViewController{
         Réactualiser l'indicateur quantité de nourriture.
     */
     func actualiserProgressViewQuantNourriture(){
-        println("actualiserProgressViewQuantNourriture")
+        print("actualiserProgressViewQuantNourriture")
         niveauNourriture.progress = Float(nourritureDisponible) / 100.0
     } // actualiserQuantNourriture
 
     /** 
     Créer des poissons et les ajouter à la scène principale.
     */
-    func ajouterLesPoissons(quantite:Int){
-        println("ajouterLesPoissons")
+    func ajouterLesPoissons(_ quantite:Int){
+        print("ajouterLesPoissons")
         // TODO
        
     } // ajouterLesPoissons
